@@ -1451,6 +1451,7 @@ void addNative(Project project, String name) {
                 headers = headerDir
                 output(ccOutput)
                 params.addAll(variantProperties.ccFlags)
+                params.add("-Wno-deprecated-declarations")
                 compiler = variantProperties.compiler
                 source(variantProperties.nativeSource)
                 cleanTask.delete ccOutput
